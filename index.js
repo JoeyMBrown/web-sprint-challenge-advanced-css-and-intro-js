@@ -373,10 +373,9 @@ function getHTML(data){
 Create a function called `randomize` that takes a data array as an argument and returns a the same array in a randomized order. */
 
 function randomize(array){
-
-    return array;
-
-  }
+  array.sort(() => Math.random() - 0.5);
+  return array;
+}
 
 
  /* 💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪
