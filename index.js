@@ -372,15 +372,33 @@ function getHTML(data){
 /* 💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪
 Create a function called `randomize` that takes a data array as an argument and returns a the same array in a randomized order. */
 
-function randomize(/* Code here */){
+function randomize(array){
 
-    /* Code here */
+    return array;
 
   }
 
 
  /* 💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪
- Use advanced array methods (.map, .reduce, .filer) to refactor your MVP code (create an array of all artists born in the 1900s with .filter, for example) */
+ Use advanced array methods (.map, .reduce, .filter) to refactor your MVP code (create an array of all artists born in the 1900s with .filter, for example) */
+
+ function checkLife(object) {
+  let yearRange = object.years.split(" - ");
+    if(parseInt(yearRange[0]) > 1899 && parseInt(yearRange[1]) < 2000) {
+        return object.name;
+  } 
+}
+
+function simplifiedLife(array) {
+  const checkedDate = [];
+  let livedDates = array.filter(checkLife);
+  if(livedDates) {
+    for(let i = 0; i < livedDates.length; i++) {
+      checkedDate.push(livedDates[i].name);
+    }
+  }
+  return checkedDate;
+}
 
  
  
